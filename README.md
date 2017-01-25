@@ -1,6 +1,6 @@
 # Digit-Recognizer-MNIST-Data
 
-- Used deep learning techniques to train a digit classifier
+- Used deep learning techniques to train a digit classifier on popular MNIST Data
 - Developed a ConvNet with 6 Convolutional Layer and 3 Fully Connected Layer
 - Used ReLU, softmax and sigmoid for activation
 - Used SGD and Adadelta for optimization
