@@ -300,10 +300,6 @@ model.compile(loss='categorical_crossentropy',
           optimizer=sgd,
           metrics=['accuracy'])
 
-model2.compile(loss='categorical_crossentropy',
-              optimizer='adadelta',
-              metrics=['accuracy'])
-
 
 def lr_schedule(epoch):
     return lr*(0.1**int(epoch/10))
@@ -348,9 +344,6 @@ model1.compile(loss='categorical_crossentropy',
               optimizer='adadelta',
               metrics=['accuracy'])
 
-
-def lr_schedule(epoch):
-    return lr*(0.1**int(epoch/10))
 
 
 # In[27]:
