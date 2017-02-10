@@ -6,3 +6,4 @@
 - Used SGD and Adadelta for optimization
 - Achieved an accuracy of 98.2% on test data by using adadelta and sigmoid
 - Increased the accuracy to 99.39% by using augmented data
+- Achieved top 9% rank in Digit Recognizer Competition by Kaggle
