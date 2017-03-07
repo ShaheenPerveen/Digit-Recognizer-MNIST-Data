@@ -1,8 +1,6 @@
 
 # coding: utf-8
 
-# In[1]:
-
 import numpy as np
 import pandas as pd
 from sklearn.cross_validation import train_test_split
@@ -23,13 +21,11 @@ get_ipython().magic('matplotlib inline')
 import cv2
 
 
-# In[2]:
 
 nb_classes = 10
 img_size = 28
 
 
-# In[3]:
 
 # importing train data
 data = pd.read_csv("/home/aiml_test_user/Shaheen/train_mnist.csv")
@@ -40,7 +36,6 @@ train = data.iloc[:,1:].values
 train.shape
 
 
-# In[6]:
 
 # convert to array, specify data type, and reshape
 labels = labels.astype(np.uint8)
@@ -53,30 +48,17 @@ train1 = np.array(train).reshape((-1, 1, 28, 28)).astype('float32')
 train1.shape
 
 
-
-
-# In[7]:
-
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
 plt.imshow(train[125][0], cmap=cm.binary) # draw the picture
 
 
-# In[8]:
-
 ## dividing by 255
 train1 /= 255
 
 
-# In[9]:
-
 train1.shape
-
-
-# In[10]:
-
-train.shape
 
 
 # In[11]:
