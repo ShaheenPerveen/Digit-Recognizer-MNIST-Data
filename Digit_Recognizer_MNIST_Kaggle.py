@@ -20,12 +20,8 @@ get_ipython().magic('matplotlib inline')
 
 import cv2
 
-
-
 nb_classes = 10
 img_size = 28
-
-
 
 # importing train data
 data = pd.read_csv("/home/aiml_test_user/Shaheen/train_mnist.csv")
@@ -34,8 +30,6 @@ labels = data[[0]].values.ravel()
 train = data.iloc[:,1:].values
 
 train.shape
-
-
 
 # convert to array, specify data type, and reshape
 labels = labels.astype(np.uint8)
@@ -46,7 +40,6 @@ train.shape
 train1 = np.array(train).reshape((-1, 1, 28, 28)).astype('float32')
 
 train1.shape
-
 
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
@@ -60,8 +53,6 @@ train1 /= 255
 
 train1.shape
 
-
-# In[11]:
 
 ## splitting the data into train and test
 from sklearn.cross_validation import train_test_split
