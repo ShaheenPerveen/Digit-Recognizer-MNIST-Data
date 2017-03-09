@@ -117,8 +117,6 @@ print('Test accuracy:', validation[1])
 
 
 
-# In[10]:
-
 ## model 3
 # Using 'adadelta' and 'sigmoid'
 
@@ -155,8 +153,6 @@ model2.compile(loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 
-# In[11]:
-
 ## fitting the model
 batch_size = 50
 nb_epoch = 10
@@ -165,8 +161,7 @@ model2.fit(x_train, Y_train, batch_size=batch_size, nb_epoch=nb_epoch,
           verbose=1, validation_data=(x_test, Y_test))
 
 
-# In[12]:
-
+#validation
 validation = model2.evaluate(x_test, Y_test, verbose=1)
 print('Test accuracy:', validation[1])
 
