@@ -63,8 +63,6 @@ Y_train = np_utils.to_categorical(y_train, nb_classes)
 Y_test = np_utils.to_categorical(y_test, nb_classes)
 
 
-# In[76]:
-
 ## model
 ## Using 'sgd' and 'softmax'
 
@@ -105,8 +103,6 @@ def lr_schedule(epoch):
     return lr*(0.1**int(epoch/10))
 
 
-# In[78]:
-
 ## fitting the model
 batch_size = 50
 nb_epoch = 15
@@ -115,8 +111,7 @@ model.fit(x_train, Y_train, batch_size=batch_size, nb_epoch=nb_epoch,
           verbose=1, validation_data=(x_test, Y_test))
 
 
-# In[85]:
-
+# validation
 validation = model.evaluate(x_test, Y_test, verbose=1)
 print('Test accuracy:', validation[1])
 
