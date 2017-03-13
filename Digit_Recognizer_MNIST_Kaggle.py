@@ -169,7 +169,6 @@ print('Test accuracy:', validation[1])
 # importing test data
 test = pd.read_csv("/home/aiml_test_user/Shaheen/test_mnist.csv")
 
-#test = test.iloc[:,1:].values
 print("type", type(train))
 print('shape', train.shape)
 
@@ -180,13 +179,9 @@ test = np.array(test).reshape((-1, 1, 28, 28)).astype('float32')
 test.shape
 
 
-# In[24]:
-
 ## predicting the test data
 y_pred = model2.predict_classes(test)
 
-
-# In[96]:
 
 # save results
 np.savetxt('submission_digitRecognizer1.csv', np.c_[range(1,len(test)+1),y_pred], delimiter=',', header = 'ImageId,Label', comments = '', fmt='%d')
