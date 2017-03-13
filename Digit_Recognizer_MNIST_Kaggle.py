@@ -166,22 +166,12 @@ validation = model2.evaluate(x_test, Y_test, verbose=1)
 print('Test accuracy:', validation[1])
 
 
-# In[20]:
-
 # importing test data
 test = pd.read_csv("/home/aiml_test_user/Shaheen/test_mnist.csv")
 
 #test = test.iloc[:,1:].values
 print("type", type(train))
 print('shape', train.shape)
-
-
-
-# In[21]:
-
-#test = test.astype(np.float32, copy=False)
-
-#test = test.reshape(-1,1,28,28).astype('float32')
 
 ## dividing by 255
 test /= 255
