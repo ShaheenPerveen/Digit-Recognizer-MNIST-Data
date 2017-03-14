@@ -187,8 +187,6 @@ y_pred = model2.predict_classes(test)
 np.savetxt('submission_digitRecognizer1.csv', np.c_[range(1,len(test)+1),y_pred], delimiter=',', header = 'ImageId,Label', comments = '', fmt='%d')
 
 
-# In[15]:
-
 ## data augmentation
 X_train, X_val, Y_train, Y_val = train_test_split(train1, labels, test_size=0.2)
 
@@ -206,8 +204,6 @@ datagen = ImageDataGenerator(featurewise_center=False,
 
 datagen.fit(X_train)
 
-
-# In[16]:
 
 # Reinstallise models 
 ## Using 'sgd' and 'softmax'
@@ -252,8 +248,6 @@ model.compile(loss='categorical_crossentropy',
 def lr_schedule(epoch):
     return lr*(0.1**int(epoch/10))
 
-
-# In[24]:
 
 # Reinstallise models 
 # Using 'adadelta' and 'sigmoid'
