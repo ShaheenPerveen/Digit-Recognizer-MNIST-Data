@@ -288,7 +288,6 @@ model1.compile(loss='categorical_crossentropy',
 
 
 
-# In[27]:
 
 nb_epoch = 20
 batch_size = 40
@@ -298,13 +297,10 @@ model1.fit_generator(datagen.flow(X_train, Y_train, batch_size=batch_size),
                             validation_data=(X_val, Y_val))
 
 
-# In[26]:
 
 validation = model1.evaluate(X_val, Y_val, verbose=1)
 print('Test accuracy:', validation[1])
 
-
-# In[28]:
 
 # predicting the test data
 y_pred = model1.predict_classes(test)
